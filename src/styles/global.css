@@ -1,0 +1,42 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+}
+  
+html, body {
+    height: 100%;
+    counter-reset: sidenotecounter;
+}
+  
+body {
+    line-height: 1.5;
+    font-size: var(--base-size);
+    -webkit-font-smoothing: antialiased;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+input, button, textarea, select {
+    font: inherit;
+}
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+:root{
+    --text-dark: #383943;
+    --text-medium: #96979C;
+    --accent: #4154E8;
+    --highlight: #FFF4A6;
+    --base-size: 16px;
+    --dm: 'DM Sans';
+    --plex: 'IBM Plex Serif';
+}

@@ -1,0 +1,104 @@
+/* Sidenotes, margin notes, figures, captions */
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -240px;
+    width: 200px;
+    vertical-align: baseline;
+    position: relative;
+    font-size: 0.75rem;
+}
+
+
+.sidenote-number {
+    counter-increment: sidenotecounter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+    /* font-family: et-book-roman-old-style; */
+    position: relative;
+    vertical-align: baseline;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--dm);
+    font-weight: 700;
+    
+    border-radius: 2px;
+    background: white;
+    transition: background 100ms ease, color 100ms ease;
+}
+
+.sidenote-number:after {
+    content: counter(sidenotecounter);
+    font-size: 0.75rem;
+    padding-inline: 4px;
+    top: -0.4rem;
+    left: 0.1rem;
+}
+
+.sidenote:before {
+    content: counter(sidenotecounter) " ";
+    font-size: 12px;
+    padding-right: 8px;
+    color: var(--accent);
+    /* top: -0.5rem; */
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+    margin-right: calc(-240px - 32px);
+    /* min-width: 59%; */
+    text-align: left;
+}
+
+input.margin-toggle {
+    display: none;
+}
+
+label.sidenote-number {
+    display: inline-block;
+    max-height: 2rem; /* should be less than or equal to paragraph line-height */
+}
+
+label.margin-toggle:not(.sidenote-number) {
+    display: none;
+}
+
+@media (max-width: 1056px){
+
+    .sidenote,
+    .marginnote {
+        display: none;
+    }
+
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative;
+    }
+
+    .sidenote-number:has(+ .margin-toggle:checked):after{
+        background: var(--accent);
+        color: white !important;
+    }
+
+    .sidenote-number:has(+ .margin-toggle:not(:checked)):after{
+        background: rgba(65, 84, 232, 0.1);
+    }
+
+    .sidenote-number:has(+ .margin-toggle:not(:checked)):hover:after{
+        background: rgba(65, 84, 232, 0.3);
+    }
+
+}

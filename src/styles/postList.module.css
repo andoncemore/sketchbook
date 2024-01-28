@@ -1,0 +1,15 @@
+
+.wrapper{
+    padding: 16px 16px;
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: var(--dm);
+}
+
+.list{
+    margin-top: 16px;
+}
+
+.wrapper h1{
+    margin-bottom: -4px;
+}

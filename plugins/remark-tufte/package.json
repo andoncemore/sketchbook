@@ -1,0 +1,35 @@
+{
+    "author": {
+        "name": "Jeff Rafter",
+        "email": "jeffrafter@gmail.com"
+    },
+    "bugs": {
+        "url": "https://github.com/jeffrafter/gatsby-remark-tufte/issues"
+    },
+    "dependencies": {
+        "html-parse-stringify": "^1.0.3",
+        "unified": "^6.1.6",
+        "retext": "^5.0.0",
+        "speakingurl": "^14.0.1",
+        "unist-builder": "^1.0.2",
+        "hast-util-to-html": "^3.1.0",
+        "mdast-util-to-hast": "^2.5.0",
+        "unist-util-select": "^1.5.0",
+        "unist-util-visit": "^1.2.0"
+    },
+    "deprecated": false,
+    "description": "Enable sidenotes and margin notes for your markdown",
+    "keywords": [
+        "gatsby",
+        "gatsby-plugin",
+        "tufte"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "remark-tufte",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Zygar/gatsby-remark-tufte"
+    },
+    "version": "1.1.0"
+}
