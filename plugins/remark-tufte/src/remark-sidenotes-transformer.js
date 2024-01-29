@@ -2,9 +2,8 @@
 import getSlug from 'speakingurl'
 import {visit} from 'unist-util-visit'
 import {select} from 'unist-util-select'
-import {toHast} from 'mdast-util-to-hast'
 import {toHtml} from 'hast-util-to-html'
-
+import {toHast} from 'mdast-util-to-hast'
 // const visit = require("unist-util-visit");
 // const select = require("unist-util-select");
 // const toHAST = require("mdast-util-to-hast");
