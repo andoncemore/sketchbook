@@ -3,6 +3,7 @@
         "name": "Jeff Rafter",
         "email": "jeffrafter@gmail.com"
     },
+    "type": "module",
     "bugs": {
         "url": "https://github.com/jeffrafter/gatsby-remark-tufte/issues"
     },
@@ -12,10 +13,10 @@
         "retext": "^5.0.0",
         "speakingurl": "^14.0.1",
         "unist-builder": "^1.0.2",
-        "hast-util-to-html": "^3.1.0",
-        "mdast-util-to-hast": "^2.5.0",
-        "unist-util-select": "^1.5.0",
-        "unist-util-visit": "^1.2.0"
+        "hast-util-to-html": "^9.0.0",
+        "mdast-util-to-hast": "^13.1.0",
+        "unist-util-select": "^5.1.0",
+        "unist-util-visit": "^5.0.0"
     },
     "deprecated": false,
     "description": "Enable sidenotes and margin notes for your markdown",

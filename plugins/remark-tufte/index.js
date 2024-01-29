@@ -1,9 +1,10 @@
 "use strict";
 
-const sidenotes = require("./src/remark-sidenotes-transformer")();
+import sidenotes from './src/remark-sidenotes-transformer.js'
+// const sidenotes = require("./src/remark-sidenotes-transformer")();
 // const wrapInSection = require("./src/wrap-in-section-transformer")();
 
-module.exports = ({ markdownAST }, pluginOptions = {}) => {
+export default function Tufte({ markdownAST }, pluginOptions = {}){
     try {
         sidenotes(markdownAST);
     } catch (error) {
