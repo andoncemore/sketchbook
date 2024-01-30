@@ -1,29 +1,29 @@
 import * as React from 'react'
 import { Link, navigate, useStaticQuery, graphql } from 'gatsby'
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { CaretDownIcon } from '@radix-ui/react-icons'
-import { gardenTabs } from './gardenTags'
+// import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+// import { CaretDownIcon } from '@radix-ui/react-icons'
+// import { gardenTabs } from './gardenTags'
 import * as styles from './layout.module.css'
 
 
-const GardenButton = React.forwardRef((props, forwardedRef) => (
-  <div className={styles.gardenDropdown}  data-state={props['data-state']} >
-    <button {...props} ref={forwardedRef}>garden</button>
-    <ul className={styles.gardenEmojis}>
-      {gardenTabs.map(elm => 
-        <li key={elm.name}>
-          <button 
-            className={props.activetags.includes(elm.id) ? 'active' : ''}
-            onClick={() => navigate(elm.url)}
-          >
-            <span style={{filter:elm.filter}}>{elm.emoji}</span>
-          </button>
-        </li>
-      )}
-    </ul>
-    <button className={styles.gardenCaret} {...props}><CaretDownIcon /></button>
-  </div>
-));
+// const GardenButton = React.forwardRef((props, forwardedRef) => (
+//   <div className={styles.gardenDropdown}  data-state={props['data-state']} >
+//     <button {...props} ref={forwardedRef}>garden</button>
+//     <ul className={styles.gardenEmojis}>
+//       {gardenTabs.map(elm => 
+//         <li key={elm.name}>
+//           <button 
+//             className={props.activetags.includes(elm.id) ? 'active' : ''}
+//             onClick={() => navigate(elm.url)}
+//           >
+//             <span style={{filter:elm.filter}}>{elm.emoji}</span>
+//           </button>
+//         </li>
+//       )}
+//     </ul>
+//     <button className={styles.gardenCaret} {...props}><CaretDownIcon /></button>
+//   </div>
+// ));
 
 const Layout = ({ children, location, tags }) => {
   const data = useStaticQuery(graphql`

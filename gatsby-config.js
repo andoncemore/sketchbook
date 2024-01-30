@@ -51,14 +51,21 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-omni-font-loader`,
       options: {
-        fonts: [
-          `dm sans\:500,500i,700,700i`,
-          `ibm plex serif\:400,400i,500,500i,700,700i`
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `DM Sans`,
+            file: `https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap`,
+          },
+          {
+            name: `IBM Plex Serif`,
+            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap`,
+          },
         ],
-        display: 'swap'
-      }
+      },
     }
   ]
 }
