@@ -5,7 +5,7 @@ const getSlug = require("speakingurl");
 // import {toHtml} from 'hast-util-to-html'
 // import {toHast} from 'mdast-util-to-hast'
 const visit = require("unist-util-visit");
-const select = require("unist-util-select");
+const select = require("unist-util-select").select;
 const toHAST = require("mdast-util-to-hast");
 const toHTML = require("hast-util-to-html");
 
@@ -57,17 +57,17 @@ function transformer(tree) {
   // Syntax for Marginnotes [^<descriptor>] and somewhere else [^<descriptor]: {-}
   visit(tree, "footnoteReference", (node, index, parent) => {
     const target = select(
-      tree,
-      `footnoteDefinition[identifier=${node.identifier}]`
+      `footnoteDefinition[identifier=${node.identifier}]`,
+      tree
     );
 
-    if (!target.length)
-      throw new Error(`No coresponding note found for "${node.identifier}"`);
+    // if (!target.length)
+    //   throw new Error(`No coresponding note found for "${node.identifier}"`);
 
     const notesAst =
-      target[0].children.length && target[0].children[0].type === "paragraph"
-        ? target[0].children[0].children
-        : target[0].children;
+      target.children.length && target.children[0].type === "paragraph"
+        ? target.children[0].children
+        : target.children;
 
     const nodeDetail = extractNoteFromHtml(coerceToHtml(notesAst));
 

@@ -1,6 +1,8 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
+const visit = require("unist-util-visit");
+const selectAll = require("unist-util-select").selectAll;
+const toHTML = require("hast-util-to-html");
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
@@ -21,7 +23,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         })
     }
 }
-
 
 exports.createPages = async ({ graphql, actions }) =>  {
     const { createPage } = actions
@@ -61,10 +62,10 @@ exports.createPages = async ({ graphql, actions }) =>  {
         } 
     }), {})
 
-    let { visit } = await import('unist-util-visit')
-    let { selectAll } = await import('unist-util-select')
-    const { toHtml } = await import('hast-util-to-html')
-
+    // let { visit } = await import('unist-util-visit')
+    // let { selectAll } = await import('unist-util-select')
+    // const { toHtml } = await import('hast-util-to-html')
+    console.log("Yay", selectAll);
     result.data.allMarkdownRemark.edges.forEach(edge => {
         let newAst = edge.node.htmlAst;
         // console.log(edge.node.fields.slug);
@@ -122,7 +123,7 @@ exports.createPages = async ({ graphql, actions }) =>  {
             }
         })
 
-        let updatedHTML = toHtml(newAst);
+        let updatedHTML = toHTML(newAst);
 
         createPage({
             path: `${edge.node.fields.slug}`,
