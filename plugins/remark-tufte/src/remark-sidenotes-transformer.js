@@ -1,13 +1,13 @@
-// const getSlug = require("speakingurl");
-import getSlug from 'speakingurl'
-import {visit} from 'unist-util-visit'
-import {select} from 'unist-util-select'
-import {toHtml} from 'hast-util-to-html'
-import {toHast} from 'mdast-util-to-hast'
-// const visit = require("unist-util-visit");
-// const select = require("unist-util-select");
-// const toHAST = require("mdast-util-to-hast");
-// const toHTML = require("hast-util-to-html");
+const getSlug = require("speakingurl");
+// import getSlug from 'speakingurl'
+// import {visit} from 'unist-util-visit'
+// import {select} from 'unist-util-select'
+// import {toHtml} from 'hast-util-to-html'
+// import {toHast} from 'mdast-util-to-hast'
+const visit = require("unist-util-visit");
+const select = require("unist-util-select");
+const toHAST = require("mdast-util-to-hast");
+const toHTML = require("hast-util-to-html");
 
 const MARGINNOTE_SYMBOL = "{-}";
 
@@ -41,7 +41,7 @@ const getReplacement = ({ isMarginNote, noteHTML }) => {
 };
 
 const coerceToHtml = (nodeArray) =>
-  nodeArray.map((node) => toHtml(toHast(node))).join("") || "";
+  nodeArray.map((node) => toHTML(toHAST(node))).join("") || "";
 
 const extractNoteFromHtml = (note) => {
   const matches = note.match(/(\s+)*({-})*\s*((.|\n)+)/);
@@ -92,4 +92,4 @@ function transformer(tree) {
   return tree;
 }
 
-export default sidenotes;
+module.exports = sidenotes;

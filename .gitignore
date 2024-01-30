@@ -1,5 +1,6 @@
 node_modules/
 .cache/
+public
 Notebook/_navigation/
 Notebook/_templates/
 Notebook/.obsidian/

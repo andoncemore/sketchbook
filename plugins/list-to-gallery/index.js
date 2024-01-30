@@ -1,9 +1,9 @@
-// const visit = require("unist-util-visit")
-import {visit} from 'unist-util-visit'
+const visit = require("unist-util-visit")
+// import {visit} from 'unist-util-visit'
 // const is = require("unist-util-is")
 
 
-export default function ListToGallery({ markdownAST }, pluginOptions) {
+module.exports =({ markdownAST }, pluginOptions) => {
 
     function checkNode(node){
         // console.log(node);
