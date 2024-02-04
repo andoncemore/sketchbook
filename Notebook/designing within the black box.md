@@ -7,7 +7,7 @@ cssclasses:
 tags:
   - how-to
   - wip
-updated: Jan 25, 2024
+updated: Feb 03, 2024
 ---
 
 This workshop has been developed over a couple of iterations with the goal of teaching non-technical designers an approach to working with AI that actually engages with how the technology works.
@@ -21,7 +21,7 @@ _This workshop pulls together resources created by other designers, technologist
 ## Contents
 1. Large Language Models (LLM) and GPT
 2. Chatbots as an Interface
-    1. **Tutorial**: Building a Discord Bot
+    1. **Tutorial**: [[building bots]]
     2. **Tutorial**: Binary Tree Algorithms
     3. **Tutorial**: ELIZA
 3. Generative text using probability
