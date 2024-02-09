@@ -4,7 +4,7 @@ subtitle:
 shortdesc: a workshop for designers on AI
 thumbnail: 
 cssclasses: 
-updated: Feb 03, 2024
+updated: Feb 08, 2024
 tags:
   - how-to
 ---
@@ -18,10 +18,11 @@ Through this walkthrough, you should have a discord bot, hosted on either your l
 1. Sign up for a free [Discord](https://discord.com/) account
 2. Go to the [Discord developer portal](https://discord.com/developers/applications) and click on the 'New Application' button. 
 
-You will now be redirected to a page where you can configre all the options for your app, creating a bot user and more. 
+You will now be redirected to a page where you can configure all the options for your app, creating a bot user and more. 
 
-1. Click on the "Bot" tab, press the "Add Bot" button
-2. Scroll down to the 'Privileged Gateway Intents' section, and turn on the 'Message Content Intent' switch. 
+1. Click on the "Bot" tab, scroll down to the 'Privileged Gateway Intents' section, and turn on the 'Message Content Intent' switch. 
+
+![](./images/discord_bot/discord_bot_1.png)
 
 Now you have to add your bot to the discord servers you want it to run in. For this project, we'll add all of our bots to the server I've created 'A Place to Talk to Bots'
 
@@ -29,15 +30,21 @@ Now you have to add your bot to the discord servers you want it to run in. For t
 2. Go back to your application in the [Discord developer portal](https://discord.com/developers/applications)  
 4. Navigate to the 'OAuth2 -> URL Generator' tab
 5. Under 'Scopes' check the 'bot' option
-6. In the Bot permissions section, check all the things that you would like to give your bot access to. Some of the permissions you would likely want to set:
+
+![](./images/discord_bot/discord_bot_2.png)
+
+1. In the Bot permissions section, check all the things that you would like to give your bot access to. Some of the permissions you would likely want to set:
 	1. Read Messages/View Channels
 	2. Send Messages
 	3. Send Messages in Threads
 	4. Read Message History
-7. Copy the Generated URL at the bottom of the page and paste it into your browser.
-8. You will see a page asking you which server to add this bot to. Select the 'A Place to Talk to Bots' server.
-9. Click authorize
-10. Once you hit accept, you should get a notification that your bot has joined the server. You can see the bot listed as a member of the server in the right panel. 
+2. Copy the Generated URL at the bottom of the page and paste it into your browser.
+
+![](./images/discord_bot/discord_bot_3.png)
+
+1. You will see a page asking you which server to add this bot to. Select the 'A Place to Talk to Bots' server.
+2. Click authorize
+3. Once you hit accept, you should get a notification that your bot has joined the server. You can see the bot listed as a member of the server in the right panel. 
 
 ## Building Bot Behavior
 
@@ -63,10 +70,16 @@ Before we start writing code, we have to add the Discord Bot Token to our Repl.i
 	3. In your Repl.it project, click on the 'Secrets' tool under Tools section in the sidebar. 
 	4. Create a New Secret. Name the key `DISCORD_BOT_SECRET` and in the value field paste the Token that you copied from the Discord Developer Portal.
 
+![](./images/discord_bot/discord_bot_4.png)
+
+![](./images/discord_bot/discord_bot_5.png)
+
 Finally, lets install the main packages that we will be using. You can use this same process to install other useful python packages in the future. 
 
 5. Click on the packages tool under the Tools section in the sidebar
 6. In the new Packages pane, search for **discord.py**, and click on the plus icon to install the library. 
+
+![](./images/discord_bot/discord_bot_6.png)
 
 ### Create Hello World Bot
 
@@ -130,6 +143,8 @@ client.run(token)
 7. Finally, run your python file to see your Hello World bot come online in the discord server, and respond to anyone who types '$hello'
 	1. *Repl.it*: Press the green play button at the top of the page
 	2. *Local machine*: Run the command `python main.py` from the project folder in your terminal. 
+
+![](./images/discord_bot/discord_bot_7.png)
 
 You can copy paste the full main.py file below or fork the file from my example Repl.it: https://replit.com/@andoncemore/Basic-Discord-Bot#main.py
 
@@ -258,6 +273,8 @@ result = message.content.contains('$hello')
 The discord.py library documentation will have the most comprehensive description of all the features of the library, but I've written out some helpful tips some common behaviors. 
 
 All of the example code can be found [here](https://replit.com/@andoncemore/UI-Examples-Discord-Bot#main.py)
+
+![](./images/discord_bot/discord_bot_8.png)
 
 **Guild vs DM**
 As a note, in the documentation, you will notice references to Guilds and DMs. A guild is another word for server. The variation in intents (from messages, guild_messages, dm_messages) lets you specify where the bot can listen to messages (everywhere, in the server, or in the DMs)
