@@ -3,10 +3,10 @@ title: What Can a Body Do?
 subtitle: By Sara Hendren
 shortdesc: A text is right here to start with
 thumbnail: ./images/book_covers/cover_what_can_a_body_do.png
-cssclasses: []
+cssclasses: 
 tags:
   - book
-updated: Oct 14, 2023
+updated: 2023-10-14
 ---
 
 The key ideas presented in this book start from the premise that there are fundamental [[disability is a misfit between the body and the world|misfits between the body and the world]], some of which are considered disabilities. Each chapter of the book looks at these misfits at different scales, examining how people and communities adapt themselves and how they make the built environment bend to their bodies. Through these stories, she makes the argument that [[our bodies are produced by the social, material world]].

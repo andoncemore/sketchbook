@@ -3,10 +3,10 @@ title: design
 subtitle: 
 shortdesc: collection of different definitions of design
 thumbnail: 
-cssclasses: []
+cssclasses: 
 tags:
   - definition
-updated: Oct 14, 2023
+updated: 2023-10-14
 ---
 
 ### Design is utility and significance

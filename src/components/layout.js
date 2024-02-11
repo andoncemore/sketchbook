@@ -44,7 +44,6 @@ const Layout = ({ children, location, tags }) => {
       <nav className={`${styles.header} ${exclusions.includes(location.pathname) ? styles.corner : styles.corner}`}>
         <ul className={styles.nav}>
           <li className={styles.logo}><Link to="/">adit</Link></li>
-          <li className={styles.pageLink}><Link to="/sketchbook/howto">workshops</Link></li>
           {/* <li className={styles.pageLink}><Link to="#">design work</Link></li>
           <li>
             <DropdownMenu.Root>

@@ -6,7 +6,7 @@ thumbnail:
 cssclasses: 
 tags:
   - note
-updated: Dec 15, 2023
+updated: 2023-12-15
 ---
 
 I've had a back and forth relationship with the idea of design as problem solving. When I first got introduced to design in engineering school, the problem solving framing of design was what made the practice feel so approachable to me coming from an engineering mindset. Since then, I've found more comfort in [[design's role in asking questions]] rather than having answers. But my observation of professional design practice is that designers are often doing more of the "solving problems" than "asking questions." 

@@ -1,10 +1,10 @@
 ---
-updated: Dec 19, 2023
+updated: 2023-12-19
 title: creative technology
 subtitle: 
 shortdesc: 
 thumbnail: 
-cssclasses: []
+cssclasses: 
 tags:
   - definition
 ---

@@ -7,7 +7,7 @@ cssclasses:
 tags:
   - how-to
   - wip
-updated: Feb 07, 2024
+updated: 2024-02-10
 ---
 
 This tutorial walks through the use of a binary tree algorithm in a discord chat bot by making the Animal Guessing Game. This tutorial assumes you have the Hello World discord bot from the [[building bots|building bots tutorial]]. 

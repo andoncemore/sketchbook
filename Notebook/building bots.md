@@ -4,7 +4,7 @@ subtitle:
 shortdesc: a workshop for designers on AI
 thumbnail: 
 cssclasses: 
-updated: Feb 08, 2024
+updated: 2024-02-10
 tags:
   - how-to
 ---

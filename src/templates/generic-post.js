@@ -87,7 +87,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        updated
+        updated(formatString: "MMM DD, YYYY")
         tags
         thumbnail {
           childImageSharp {

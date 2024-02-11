@@ -7,7 +7,7 @@ cssclasses:
 tags:
   - wip
   - sketch
-updated: Dec 15, 2023
+updated: 2023-12-15
 ---
 
 I've been doing a deep dive into making blobs computationally for the free-form canvas "sketchbook" portion of my website. Being able to group items based on spatial relationship and then draw boundaries around those items automatically is what I'm most interested in achieving. 

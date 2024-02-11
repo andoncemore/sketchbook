@@ -7,7 +7,7 @@ cssclasses:
 tags:
   - how-to
   - wip
-updated: Feb 05, 2024
+updated: 2024-02-10
 ---
 
 This workshop has been developed over a couple of iterations with the goal of teaching non-technical designers an approach to working with AI that actually engages with how the technology works.
