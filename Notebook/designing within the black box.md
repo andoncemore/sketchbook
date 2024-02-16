@@ -22,7 +22,7 @@ _This workshop pulls together resources created by other designers, technologist
 1. Large Language Models (LLM) and GPT
 2. Chatbots as an Interface
     1. **Tutorial**: [[building bots]]
-    2. **Tutorial**: [[binary tree algorithm]]
+    2. **Tutorial**: [[creating a decision tree]]
     3. **Tutorial**: ELIZA
 3. Generative text using probability
     1. **Tutorial**: Markov Chains
