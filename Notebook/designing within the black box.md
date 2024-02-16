@@ -7,7 +7,7 @@ cssclasses:
 tags:
   - how-to
   - wip
-updated: 2024-02-10
+updated: 2024-02-15
 ---
 
 This workshop has been developed over a couple of iterations with the goal of teaching non-technical designers an approach to working with AI that actually engages with how the technology works.
@@ -25,7 +25,7 @@ _This workshop pulls together resources created by other designers, technologist
     2. **Tutorial**: [[creating a decision tree]]
     3. **Tutorial**: ELIZA
 3. Generative text using probability
-    1. **Tutorial**: Markov Chains
+    1. **Tutorial**: [[markov chains]]
     2. **Tutorial**: Gathering Text Data
 4. Introduction to Neural Networks
     1. What is a model?
