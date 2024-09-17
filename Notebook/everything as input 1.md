@@ -1,6 +1,6 @@
 ---
-title: everything as input 1
-subtitle: workshop 1 for the everything as input class
+title: "everything as input: workshop 1"
+subtitle: Getting familiar with p5 and prototyping cursors, buttons, and text fields
 shortdesc: 
 thumbnail: 
 cssclasses: 
