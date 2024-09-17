@@ -6,7 +6,7 @@ thumbnail:
 cssclasses: 
 tags:
   - how-to
-updated: 2024-09-14
+updated: 2024-09-16
 ---
 
 In this workshop, we will explore p5.js as a tool to prototype with basic digital inputs. In future workshops, we will build upon the foundation to use machine learning models.
@@ -138,15 +138,317 @@ Here are some other examples to get inspiration from and to borrow code from:
 - [Mouse Following](https://medium.com/@maxswann/p5-js-mouse-following-tutorial-using-vectors-188481008b99)
 - [Computer Mouse Conference & Research](https://inbetweenhumansandcomputers.net/)
 - [Mouse Cursor are.na board](https://www.are.na/maxim-leyzerovich/mouse-cursor)
+- [Unusual Cursors are.na board](https://www.are.na/unusual-internet/unusual-cursors)
 
 # Button
 
-### Prototyping different buttons
+<iframe style="aspect-ratio: 3 / 4" src="https://editor.p5js.org/andoncemore/full/CZfl8JNNv"></iframe>
+
+There are two ways we can prototype buttons with p5:
+1. We could draw buttons onto the canvas. (Ex. draw a rectangle). This would give you the freedom to imagine buttons that take non-traditional shapes and forms. 
+2. We could use the standard html button, and style it using css and define with p5.
+
+### Prototyping with HTML button
+
+In p5, we can create a html button by using the [`createButton()`](https://p5js.org/reference/p5/createButton/) function. 
+
+```javascript
+function setup() {
+    noCanvas();
+    let button = createButton('click me');
+}
+
+function draw() {
+}
+```
+
+Because we don't need a canvas, we don't use the `createCanvas()` function, and instead specify `noCanvas()`.
+
+We can start to customize our button using a variety of functions provided to us from p5. This [p5 reference page](https://p5js.org/reference/p5/p5.Element/) highlights all your options. 
+
+1. **Set css styles**: We can create the styles of our button directly in p5
+```javascript
+function setup() {
+    noCanvas();
+    let button = createButton('click me');
+    button.style('color', 'blue');
+    button.style('font-size', '18px');
+}
+```
+
+2. **Set class name**: Rather than setting each individual style in p5, we can specify a class name and then apply styles in the css file:
+```javascript
+function setup() {
+    noCanvas();
+    let button = createButton('click me');
+    button.class('mybutton');
+}
+```
+and in your css file:
+```css
+.mybutton{
+    color: blue;
+    font-size: 18px;
+    padding: 8px;
+}
+```
+
+3. **Clear Existing Button Styles:** Buttons have a default style applied, and to get rid of those styles, here is some css you can use as a starting point:
+
+```css
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    background: white;
+    color: black;
+}
+```
+
+4. **Events**: We can also define what happens in response to how people interact with your buttons. What happens when someone clicks on the button? How does the button respond once you release the button? Below is a simple example of using the `mouseClicked` and `mouseOver`. Other events you have available to you from p5:
+    - doubleClicked
+    - mouseWheel
+    - mouseReleased
+    - mouseOut
+    - touchStart
+    - touchEnd
+
+```javascript
+
+let button;
+function setup() {
+    noCanvas();
+    button = createButton('click me');
+    button.mouseClicked(buttonPressed);
+    button.mouseOver(moveButton)
+}
+
+function buttonPressed(){
+    button.style('background-color', 'lightblue');
+}
+
+function moveButton(){
+    button.position(random(0, 100), random(0, 100));
+}
+```
+
+5. **Moving Position:** We can move the position of the button by using the position attribute
+
+```javascript
+function setup() {
+    noCanvas();
+    let button = createButton('click me');
+    button.position(100, 200);
+}
+```
+
+6. **Change the button text:** We can change the main text of the button at any time by setting the "value" of the button. 
+
+```javascript
+function setup() {
+    noCanvas();
+    let button = createButton('click me');
+    button.value('New Word')
+}
+```
+
+7. **Draggable**: You can make any element in p5 draggable 
+```javascript
+function setup() {
+    noCanvas();
+    let button = createButton('click me');
+    button.draggable();
+}
+```
+
+Here's another example of how you might mockup a button in a specific context by using a screenshot in the background:
+<iframe style="aspect-ratio: 4 / 3"  src="https://editor.p5js.org/andoncemore/full/6RFI2Wfr0"></iframe>
+
+
+### Prototyping by drawing on canvas
+Another approach to prototyping buttons will be to use the p5 canvas. The advantage of using this approach is that there are less constraints. However, that also means there are less convenience functions like `button.mousePressed()` for you to use. 
+
+1. Let's start by drawing a shape for our button
+```javascript
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  background(220);
+  fill('blue');
+  noStroke();
+  rect(20,20, 300, 300*2/3)
+}
+
+function windowResized(){
+    resizeCanvas(windowWidth, windowHeight)
+}
+```
+
+2. For this example, lets store our button size in a variable so we can change it once the button is clicked.
+```javascript
+let size = 300;
+function draw() {
+  background(220);
+  fill('blue');
+  noStroke();
+  rect(20,20, size, size*2/3)
+}
+```
+
+3. To figure out when someone clicks on our button, we can use the `mouseClicked()` function. This function will be called whenever someone clicks on the canvas. When someone clicks, let's decrease the size of our button. 
+```javascript
+let size = 300;
+function draw() {
+  background(220);
+  fill('blue');
+  noStroke();
+  rect(20,20, size, size*2/3)
+}
+
+function mouseClicked(){
+    size = size - 10;
+}
+```
+
+4. If we try the code, we'll see that the button does get smaller, but we can click anywhere on the canvas, not just the button. To know that the user clicked on the button, we will have to look at the mouse position and check whether it is where we drew the button on the canvas. 
+```javascript
+function mouseClicked(){
+    if(mouseX > 20 && mouseX < 20+size && mouseY > 20 && mouseY < 20 + size*2/3){
+        size = size - 10;
+    }
+}
+```
+
+5. Let's try to create a hover effect for our button. We can do the same thing we did in mouseClicked, but using the `mouseMoved()` function:
+
+```javascript
+function mouseMoved(){
+    if(mouseX > 20 && mouseX < 20+size && mouseY > 20 && mouseY < 20 + size*2/3){
+        cursor(CROSS);
+    }
+    else{
+        cursor('default');
+    }
+}
+```
+
+<iframe style="aspect-ratio: 4 / 3" src="https://editor.p5js.org/andoncemore/full/CZfl8JNNv"></iframe>
+
+
+6. What other interaction options do you have?
+    - mouseDragged()
+    - mouseWheel()
+    - mouseReleased()
+    - mousePressed()
+    - doubleClicked()
+
 
 ### Other Examples and References
+- [100 CSS Button Designs](https://ui-buttons.web.app/)
+- [Unusual Buttons are.na board](https://www.are.na/unusual-internet/unusual-buttons)
+- [Interface and buttons are.na board](https://www.are.na/mechagear-moon/interface-and-buttons)
 
 # Text Input
 
-### Prototyping text input
+Just like with the buttons, we can prototype text inputs using the built-in HTML element or we can implement text inputs by drawing directly onto the canvas. 
+
+### Prototyping with HTML text input
+
+In p5, we can create an input using the [`createInput()`](https://p5js.org/reference/p5/createInput/) function. 
+
+```javascript
+let inp;
+function setup() {
+    noCanvas();
+    inp = createInput();
+}
+
+function draw() {
+}
+```
+
+Once we create the function, just like with the button, we can style the input by applying styles in your p5 sketch, or by applying a class.
+
+```javascript
+let inp;
+function setup() {
+    noCanvas();
+    inp = createInput();
+    inp.class('myInput');
+}
+
+function draw() {
+}
+
+```
+
+In our css, we can style the input however we want. In this case, I just increased the font size and set the width to 24ch (24 characters wide). 
+
+```css
+.myInput{
+  font-size: 24px;
+  width: 24ch;
+  font-family: monospace;
+}
+```
+
+1. The first thing we can do is to track what people people are typing by using either the `changed()` function or `input()`:
+    - The **changed()** function is called whenever a person finishes filling out the field
+    - The **input()** function is called whenever a person presses any key in the field. 
+
+```javascript
+let inp;
+function setup() {
+    noCanvas();
+    let inp = createInput();
+    inp.class('myInput');
+    inp.input(onTyping)
+    //try switching 'input' to 'changed' and see what happens.
+}
+
+function draw() {
+}
+
+function onTyping(){
+    console.log(inp.value())
+}
+```
+
+2. Based on the text someone types, we can do something. Say for example I wanted to try to create a typewriter effect: When the input string is above 24 characters, write the line of text permanently to the screen, and clear the input. 
+
+```javascript
+let inp;
+function setup() {
+    noCanvas();
+    let inp = createInput();
+    inp.class('myInput');
+    inp.input(onTyping)
+    //try switching 'input' to 'changed' and see what happens.
+}
+
+function draw() {
+}
+
+function onTyping(){
+    // Check if the length of text fills the whole input
+    if(inp.value().length > 23){
+        // Create a permenent record of that line
+        createDiv(inp.value());
+        // Clear the input
+        inp.value("");
+    }
+}
+```
+
+<iframe style="aspect-ratio: 4 / 3"  src="https://editor.p5js.org/andoncemore/full/UYMmpyHUt"></iframe>
 
 ### Other Examples and References
+
+- [Tutorial on Text and Type in p5](https://creative-coding.decontextualize.com/text-and-type/)
