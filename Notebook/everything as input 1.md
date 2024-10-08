@@ -6,7 +6,7 @@ thumbnail:
 cssclasses: 
 tags:
   - how-to
-updated: 2024-09-16
+updated: 2024-09-17
 ---
 
 In this workshop, we will explore p5.js as a tool to prototype with basic digital inputs. In future workshops, we will build upon the foundation to use machine learning models.
@@ -452,3 +452,45 @@ function onTyping(){
 ### Other Examples and References
 
 - [Tutorial on Text and Type in p5](https://creative-coding.decontextualize.com/text-and-type/)
+
+
+# Assignment
+
+**Reading:**
+[Too much Information](https://www.e-flux.com/architecture/intelligence/310403/too-much-information/)
+[Trust as Social Reality](https://drive.google.com/file/d/1vc9tknu6C5715ZU85CKIqJMDblOxOcfX/view)
+
+
+**Secondary Research:** Research a form of sensing or new sensor and bring it to class next week for discussion. 
+
+**Technology-Centered Research**: Pick a specific context and prototype 2-3 different inputs (buttons, cursors, text fields, or other). Be prepared to show/demo and discuss what you did, what you learned and your opinions. No presentations
+
+- **Context**: Select a space, relationship, behavior, or activity
+- 
+- **Document:** Document your sketches, insights and reflections in a "notebook" of your choosing - make sure it is shareable. (Ex. a website, google doc, google slides). Record your work's process through screenshots, recordings, and links. 
+
+Use the workshop on prototyping cursors, buttons, and text fields, and last weeks readings to assist you in the investigation.
+
+ Be prepared to show/demo and discuss what you did, what you learned and your opinions. No presentations
+
+- **Context**: Select a space, relationship, behavior, or activity
+- **Input States:** Identify 2-3 states
+- **Output Sketches:** What is communicated to user(s) when a certain state is reached?
+- **Document:** Document your sketches, insights and reflections in a studio notebook of your choice. Record your work's process through screenshots, recordings, and links. 
+
+
+# Discussion Questions
+
+- What is one of your takeaways from the reading?
+
+- The reading talks about the God's Eye View asserting itself through simulations. What other perspectives can machines take? What context do they take those perspectives?
+
+- What are different dimensions by which machines "see"
+
+- Tool making as metaphors
+
+- Being "typed" and how we take on different states. 
+
+- Computation projects a future that is like the past, which makes it incapable of dealing with the present which is never stable
+
+- If you were to fill out a god's eye view of society, what bodies do you imagine in it? What do you look like in this simulation? What exactly is the model of your body moving through time? What does this simulation account for, or not account for? What hidden or not sensible qualities are erased? What are you able to name easily? What are your blind spots? What should the machine eye visualize that you cannot? What is the simulation of America in which a person of color lived a full and healthy life? In which the mentally ill were cared for? In which debt slavery was abolished? In which racialized capitalism was acknowledged as real and accounted for in all aspects of society? What could technology look like if it were not built around efficiency alone, if history and narrative context were not costly aspects to be erased, but in fact essential to a complete simulation? How would our seeing, naming, and knowing change, if the practice of technology was not framed so relentlessly as constituting objective observation of phenomena, but instead as an active creator of an illusion of empirical, measurable, stable, and separate world?
