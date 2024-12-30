@@ -15,15 +15,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/Notebook`,
+        path: `${__dirname}/content`,
         ignore: ['**/_templates', '**/_navigation', '**/.obsidian', '**/_drawings']
       },
     },
     {
       resolve: `gatsby-source-git`,
       options: {
-        name: `test-vault`,
-        remote: `https://github.com/andoncemore/test-markdown-vault.git`,
+        name: `sketchbook-content`,
+        remote: `https://github.com/andoncemore/sketchbook-content-vault.git`,
         branch: `main`,
         patterns: ['!**/{_templates,_navigation,_drawings,.obsidian}/**', '**/*.md', 'images/**']
       }
