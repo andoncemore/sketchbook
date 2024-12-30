@@ -1,7 +1,7 @@
 ---
-title: design
+title: what is design
 subtitle: 
-shortdesc: collection of different definitions of design
+shortdesc: I spent my early career really wrangling with the question "what is design." But I've realized there really isn't ever a single answer, so instead this is my catalog of the different definitions of design that have resonated with me
 thumbnail: 
 cssclasses: 
 tags:

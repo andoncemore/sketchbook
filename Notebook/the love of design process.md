@@ -6,8 +6,7 @@ thumbnail:
 cssclasses: 
 tags:
   - note
-  - wip
-updated: 2023-12-19
+updated: 2024-12-27
 ---
 
 > Sometimes when you achieve things, you realize that the things that you achieve are not really the thing, it's the journey to get there that's magical.[^1]

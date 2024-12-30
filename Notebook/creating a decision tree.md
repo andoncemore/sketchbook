@@ -1,7 +1,7 @@
 ---
 title: creating a decision tree
 subtitle: tutorial on creating a decision tree based discord bot
-shortdesc: 
+shortdesc: building a binary tree algorithm as a chatbot feels foundational to exploring algorithmic decision making, including this current era of LLM based systems
 thumbnail: 
 cssclasses: 
 tags:

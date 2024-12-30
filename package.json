@@ -27,6 +27,7 @@
     "gatsby-remark-prismjs": "^7.10.0",
     "gatsby-remark-tufte": "^1.0.6",
     "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-source-git": "^1.1.0",
     "gatsby-transformer-remark": "^6.10.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "hast-util-to-html": "^7.1.3",

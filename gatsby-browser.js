@@ -1,6 +1,6 @@
 require("./src/styles/global.css")
 require("./src/styles/prism.css")
-require("./src/styles/tufte.css")
+// require("./src/styles/tufte.css")
 const React = require("react")
 const Layout = require("./src/components/layout").default
 

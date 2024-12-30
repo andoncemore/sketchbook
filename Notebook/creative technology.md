@@ -1,12 +1,12 @@
 ---
-updated: 2023-12-19
 title: creative technology
 subtitle: 
-shortdesc: 
+shortdesc: "I think what makes my creative technology practice is: 1) treating technology as a material 2) making ideas tangible 3) bringing a system perspectives 4) working like a home cook"
 thumbnail: 
 cssclasses: 
 tags:
   - definition
+updated: 2024-12-24
 ---
 *I gave version of this writing as a talk at ArtCenter Creative Tech Week in 2022.* 
 

@@ -1,7 +1,7 @@
 ---
 title: body tracking with ml5js
 subtitle: Learning to use the body tracking models in ml5.js
-shortdesc: 
+shortdesc: exploring the body tracking models in the ml5js library by remixing the examples (rather than starting from scratch)
 thumbnail: 
 cssclasses: 
 tags:

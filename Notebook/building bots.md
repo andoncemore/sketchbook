@@ -1,10 +1,10 @@
 ---
 title: building a discord bot
 subtitle: 
-shortdesc: a workshop for designers on AI
+shortdesc: using the discord api is super convenient way to prototype conversational interfaces and interactions as a designer. It creates good constraints, forcing you to focus on the conversational aspects of the interaction
 thumbnail: 
 cssclasses: 
-updated: 2024-02-10
+updated: 2024-12-24
 tags:
   - how-to
 ---

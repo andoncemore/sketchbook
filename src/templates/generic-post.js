@@ -6,6 +6,7 @@ import { Tooltip } from 'react-tooltip';
 import { gardenTabs } from '../components/gardenTags'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "yet-another-react-lightbox/styles.css";
+import "../styles/tufte.css"
 
 export default function GenericPostTemplate({
   data, // this prop will be injected by the GraphQL query below.

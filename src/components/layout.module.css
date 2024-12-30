@@ -1,33 +1,38 @@
 .header{
-    position: sticky;
-    top:0;
-    left:0;
-    z-index: 10;
-    padding: 24px;
-    padding-bottom: 12px;
-    background: rgba(255,255,255,0.5);
-
-    /* display: grid;
-    grid-template-columns: [start] 1fr [left] minmax(0px, calc(var(--base-size) * 40)) [right] 2fr [end];
-    max-width: 1280px;
-    margin-block: 0;
-    margin-inline: auto; */
-    /* padding-top: 24px; */
-    /* padding: 10px 14px; */
-    /* align-items: center; */
+    padding: 12px 24px;
+    background: rgba(255,255,255,0.5);   
 }
 
-.header.corner{
-    margin-inline:0;
+.primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.secondary{
+    padding-top: 4px;
+}
+
+.header ul{
+    padding: 0;
+    list-style: none;
+}
+
+
 
 
 .nav{
+    position: fixed;
+    padding: 12px 24px;
+    top:0;
+    left:0;
+    z-index: 10;
+
+    flex: 1;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items:flex-start;
-    padding: 0;
     text-transform: lowercase;
     font-family: var(--dm);
     list-style: none;
@@ -36,8 +41,27 @@
     gap: 16px;
 }
 
-.header.corner > .nav{
-    grid-column: start / span 2
+.filler{
+    flex: 1;
+}
+
+.pageTitles{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Fiyona';
+    font-size: 24px;
+    gap: 8px;
+    padding: 0;
+}
+
+.pageTitles a{
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.pageTitles a:global(.active){
+    text-decoration: none;
 }
 
 .nav > li{
@@ -62,11 +86,13 @@
 
 .logo{
     font-size: 18px;
+    font-family: 'Fiyona';
     color: var(--text-dark);
     display: inline-flex;
     flex-flow: column nowrap;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 900;
+    margin-top:8px;
 }
 
 .logo a{
@@ -82,6 +108,38 @@
     background-repeat: repeat-x;
     height:8px;
 }
+
+/* Sketchbook Tabs */
+
+.sketchbookTabs{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    list-style: none;
+    gap: 8px;
+
+}
+
+.sketchbookTabs a{
+    font-size: 14px;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-weight: 300;
+    font-family: 'IBM Plex Sans';
+    color: var(--text-dark);
+    border:1px solid var(--text-dark);
+    line-height: 1;
+}
+
+.sketchbookTabs > a[aria-current="page"]{
+    color: white;
+    background: var(--text-dark);
+    border: none;
+    font-weight: 500;
+}
+
+
 
 /* Garden Dropdown */
 

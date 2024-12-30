@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Fiyona";
+    src: url("FiyonaVariable-variable.woff2")
+    format("woff2-variations");
+    font-weight: 125 950;
+    font-style: normal;
+}

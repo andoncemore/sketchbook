@@ -1,6 +1,7 @@
 .mainContainer{
     max-width: 360px;
     padding-inline: 16px;
+    margin: 0 auto;
 }
 
 .mainContainer h1{
